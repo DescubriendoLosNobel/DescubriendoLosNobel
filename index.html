@@ -1,0 +1,81 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Conferencias Nobel 2023</title>
+      <link rel="stylesheet" href="styles.css">
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+      </style>
+   </head>
+   <body>
+      <header>
+         <nav>
+            <ul>
+               <li><a href="#second-title">Premios del año</a></li>
+               <li><a href="about.html">Acerca de los Nobel</a></li>
+               <li><a href="articles.html">Artículos</a></li>
+               <li><a href="past-conferences.html">Conferencias anteriores</a></li>
+            </ul>
+            <a href="https://www.facebook.com/BigdataScienceMexico"> <img src="Images/trix.png" alt="Logo de carrera" class="logo-tics"></a>
+         </nav>
+         <h1>Descubriendo los Nobel</h1>
+         <p id="landing-description"> Descubre el ciclo anual de conferencias acerca de los ganadores del Premio Nobel impartidas por distinguidos investigadores y profesionales de la UNAM y de otras instituciones académicas mexicanas.</p>
+         <a href="future-conferences.html" class="cta-button">Explora las Conferencias</a>
+      </header>
+      <img src="Images/nobel_pres.jpg" alt="Medalla de los Nobel" class="full-width-image">
+      <p class="image-description">Medalla de los Nobel. &copy;The Nobel Foundation.</p>
+      <section>
+         <h2 id="second-title">¡Conoce los premios Nobel de este año!</h2>
+         <p id = 'second-description'>Da click en cualquiera de las fotos para conocer más de los laureados del Nobel de este año.</p>
+      </section>
+      <div class="grid">
+         <img src="Images/paz.jpg" alt="Nobel 1" onclick="showDescription('Nobel 1')">
+         <img src="Images/economia.jpeg" alt="Nobel 2" onclick="showDescription('Nobel 2')">
+         <img src="Images/literatura.jpeg" alt="Nobel 3" onclick="showDescription('Nobel 3')">
+         <img src="Images/physics.jpg" alt="Nobel 4" onclick="showDescription('Nobel 4')">
+         <img src="Images/medicine.jpg" alt="Nobel 5" onclick="showDescription('Nobel 5')">
+         <img src="Images/chemistry.jpg" alt="Nobel 6" onclick="showDescription('Nobel 6')">
+      </div>
+      <div class="description" id="descBox">
+         <p id="descText"></p>
+         <button onclick="closeDescription()">Cerrar</button>
+      </div>
+      <script>
+         function showDescription(nobel) {
+             const descriptions = {
+                 'Nobel 1': 'Descripción del Nobel 1...',
+                 'Nobel 2': 'Descripción del Nobel 2...',
+                 'Nobel 3': 'Descripción del Nobel 3...',
+                 'Nobel 4': 'Descripción del Nobel 4...',
+                 'Nobel 5': 'Tenemos el primer Nobel de la semana!🏅 La Asamblea Nobel del Instituto Karolinska otorgó hoy el Premio Nobel de Fisiología o Medicina 2023 a Katalin Karikó y Drew Weissman por sus descubrimientos en la modificación de nucleósidos que permitieron las vacunas de ARNm eficaces contra la COVID-19, revolucionando la respuesta ante la pandemia de 2020. Sus hallazgos innovadores cambiaron la comprensión de la interacción del ARNm con el sistema inmunológico y aceleraron el desarrollo de vacunas en una crisis de salud sin precedentes.',
+                 'Nobel 6': 'Descripción del Nobel 6...',
+             };
+         
+             const descBox = document.getElementById('descBox');
+             const descText = document.getElementById('descText');
+         
+             descText.textContent = descriptions[nobel];
+             descBox.style.display = 'block';
+         }
+         
+         function closeDescription() {
+             document.getElementById('descBox').style.display = 'none';
+         }
+         
+      </script>
+      <footer>
+         <div class="text-and-links">
+         <p id="copyright-notice"> Ilustraciones por Niklas Elmehed. © 2023 Nobel Prize Outreach. Todos los derechos reservados.</p>
+         <div class="links-container">
+            <p><a href="https://www.enesmorelia.unam.mx/" target="_blank">UNAM ENES Morelia</a></p>
+            <p><a href="https://www.instagram.com/descubriendolosnobel/" target="_blank">Instagram</a></p>
+            <p><a href="https://www.facebook.com/..." target="_blank">Facebook</a></p>
+         </div>
+         </div>
+         <a href="https://www.enesmorelia.unam.mx/"><img src="Images/logos-ENES.png" alt="Logo de UNAM ENES Morelia" id="logo-footer" loading="lazy"> </a>
+      </footer>
+   </body>
+</html>

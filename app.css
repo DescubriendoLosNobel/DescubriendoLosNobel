@@ -1,0 +1,75 @@
+        body {
+            font-family:'Roboto', sans-serif;
+            margin: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        .conferencia {
+            background-color: white;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .conferencia h2 {
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+          footer {
+              flex-direction: column;
+          }
+        }
+        
+        footer {
+          position: relative; 
+          background-color: #f9f9f9;
+          padding: 15px;
+          text-align: center;
+          border-top: 2px solid #ddd;
+          margin-top: 15px;
+        }
+        
+        
+        #logo-footer {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 250px;
+          height: auto;
+          max-width: 100%;
+          /* Optional: Add some margin if needed */
+          margin: 10px;
+        }
+        
+        .links-container {
+          display: flex;
+          flex-direction: row;
+          margin-right: 20px;  
+        }
+        
+        .links-container p {
+          margin-right: 20px;  /* Adjust the value to get the desired spacing */
+        }
+        
+        
+        .text-and-links {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+          .logo-tics {
+            position: absolute;
+            top: 20px; 
+            right: 30px; 
+            width: 150px; 
+            height: auto;
+          }
+          .nobel-imgs {
+            width: 100px; /* Size of the square image */
+            height: 100px; /* Size of the square image */
+            object-fit: cover; /* This will ensure the image covers the square area */
+            margin-right: 20px; /* This adds some space between the image and the rest of the content in the div */
+          }

@@ -1,0 +1,107 @@
+h1{
+    text-align: center;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 2rem;
+    background-color: white;
+}
+
+.tab-container {
+    text-align: center;
+  }
+  
+.tab-container button {
+    margin: 5px;
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounds the corners. Adjust the px value to increase or decrease the roundness */
+    padding: 10px 20px; /* Adjusts the padding inside the buttons, making them taller and wider */
+    background-color: #235c8e; /* Example color */
+    color: white; /* Text color */
+    cursor: pointer; /* Changes cursor to a pointer on hover */
+    outline: none; /* Removes the outline that might appear when the button is clicked */
+    transition: background-color 0.3s; /* Smooth background color change when interacting */
+  }
+
+
+  .logo-tics {
+    position: absolute;
+    top: 20px; 
+    right: 30px; 
+    width: 150px; 
+    height: auto;
+  }
+
+
+footer {
+  position: relative; 
+  background-color: #f9f9f9;
+  padding: 15px;
+  text-align: center;
+  border-top: 2px solid #ddd;
+  margin-top: 15px;
+}
+
+
+#logo-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  height: auto;
+  max-width: 100%;
+  /* Optional: Add some margin if needed */
+  margin: 10px;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;  
+}
+
+.links-container p {
+  margin-right: 20px;  /* Adjust the value to get the desired spacing */
+}
+
+
+.text-and-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.tablinks {
+  background-color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tablinks:hover {
+  background-color: #ddd;
+}
+
+.tablinks.active {
+  background-color: #ccc;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Default tab content will be visible */
+.tab-content.active {
+  display: block;
+}
+
+#instructions {
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Agrega espacio antes y después del párrafo */
+    font-size: 1.0em; /* Aumenta el tamaño del texto */
+}

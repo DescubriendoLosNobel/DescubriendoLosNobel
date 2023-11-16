@@ -1,0 +1,210 @@
+/* styles.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 45px;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+header p {
+  max-width: 70%; 
+  text-align: center;
+  padding-left: 175px;
+}
+
+.logo-tics {
+  position: absolute;
+  top: 20px; 
+  right: 30px; 
+  width: 200px; 
+  height: auto;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 15px;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.cta-button {
+  background-color: #235c8e;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  nav li {
+    display: block;
+    margin: 10px;
+  }
+
+  nav ul {
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+img {
+  width: 500px;  /* Or any other size you prefer */
+  height: auto;  /* Maintains the aspect ratio */
+}
+
+h2 {
+  margin-left: 30px;  /* Adjust the value as needed to achieve the desired position */
+}
+
+#nobel_title {
+  font-weight: bold;
+  text-align: center;
+}
+
+#landing-description{
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  footer {
+      flex-direction: column;
+  }
+}
+
+footer {
+  position: relative; 
+  background-color: #f9f9f9;
+  padding: 15px;
+  text-align: center;
+  border-top: 2px solid #ddd;
+  margin-top: 15px;
+}
+
+
+#logo-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  height: auto;
+  max-width: 100%;
+  /* Optional: Add some margin if needed */
+  margin: 10px;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;  
+}
+
+.links-container p {
+  margin-right: 20px;  /* Adjust the value to get the desired spacing */
+}
+
+
+.text-and-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+article {
+  padding-left: 20px; /* Adjust the value as needed */
+  padding-right: 20px;
+}
+article p {
+  text-align: justify;
+}
+
+
+
+.full-width-image {
+  display: block;
+  width: 100%;        
+  height: auto;       
+  margin: 0;          
+  border: none;      
+  max-height: 600px;  
+}
+
+.image-description {
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-top: 10px;   /* Espaciado superior opcional */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px); /* Cambiamos el tamaño de las columnas */
+  gap: 50px; /* Reducimos el espacio entre las imágenes */
+  justify-content: center; /* Centra la cuadrícula horizontalmente */
+}
+
+.grid img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.description {
+  display: none;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px; /* Reducimos el tamaño del cuadro de descripción */
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+#second-title{
+  text-align: center;
+}
+
+#second-description{
+  text-align: center;
+}
+
+#history h2{
+  text-align: center;
+  padding-left: 20px;
+}
+
+h2 + p {
+  text-align: justify;
+  padding-left: 20px;
+}
+
+
+
+#impact h2{
+  text-align: center;
+  padding-left: 20px;
+}
