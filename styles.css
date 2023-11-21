@@ -102,13 +102,11 @@ footer {
 
 #logo-footer {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 0;
+  left: 10px;
+  margin: 10px; /* Ajusta el margen según tus preferencias */
   width: 250px;
-  height: auto;
-  max-width: 100%;
-  /* Optional: Add some margin if needed */
-  margin: 10px;
+  height: auto
 }
 
 .links-container {
