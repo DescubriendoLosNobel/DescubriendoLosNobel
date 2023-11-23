@@ -173,7 +173,7 @@ article p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 250px; /* Reducimos el tamaño del cuadro de descripción */
+  width: 1000px; /* Reducimos el tamaño del cuadro de descripción */
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -204,4 +204,97 @@ h2 + p {
 #impact h2{
   text-align: center;
   padding-left: 20px;
+}
+
+/* Existing styles */
+/* ... */
+
+/* Fade-in and fade-out animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.description {
+  /* Change position to fixed */
+  position: fixed;
+  /* Center the box */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Ensure it's on top of other elements */
+  z-index: 1000; /* You can adjust this value as needed */
+  
+  /* Other existing styles... */
+  width: 750px;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #ecebe6;
+  display: none; /* Initial state */
+  animation: fadeIn 0.5s;
+}
+
+.description.closing {
+  animation: fadeOut 0.5s; /* Fade-out animation */
+}
+
+/* Responsive image styles */
+#descImage {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px; /* Space between image and text */
+}
+
+/* Nobel Academy link styles */
+#nobelLink {
+  display: inline-block;
+  margin-top: 20px;
+  color: #235c8e; /* Matching color scheme */
+  text-decoration: none;
+  border-bottom: 1px solid #235c8e; /* Underline effect */
+}
+
+/* Additional media queries for responsiveness */
+@media (max-width: 768px) {
+  .description {
+    width: 90%; /* Smaller width on smaller screens */
+    padding: 10px; /* Adjust padding */
+  }
+}
+
+/* Estilos existentes para .description y otros elementos... */
+
+/* Estilizando el botón */
+.description button {
+  background-color: #235c8e; /* Color de fondo */
+  color: white; /* Color de texto */
+  border: none; /* Sin bordes */
+  padding: 10px 20px; /* Relleno */
+  margin-top: 20px; /* Espacio encima del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de mano para indicar que es clickeable */
+  font-size: 1em; /* Tamaño de la letra */
+  transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+.description button:hover {
+  background-color: #1e5078; /* Color de fondo al pasar el ratón por encima */
+}
+
+/* Asegúrate de que el enlace y el botón estén uno tras otro en el HTML */
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.closing {
+  animation: fadeOut 0.5s;
 }
