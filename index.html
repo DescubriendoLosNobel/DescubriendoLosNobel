@@ -36,46 +36,119 @@
          <img src="Images/paz.jpeg" alt="Nobel 1" onclick="showDescription('Nobel 1')">
          <img src="Images/economy.jpeg" alt="Nobel 2" onclick="showDescription('Nobel 2')">
          <img src="Images/literature.jpeg" alt="Nobel 3" onclick="showDescription('Nobel 3')">
-         <img src="Images/physics.jpeg" alt="Nobel 4" onclick="showDescription('Nobel 4')">
+         <img src="Images/chemistry.jpeg" alt="Nobel 4" onclick="showDescription('Nobel 4')">
          <img src="Images/medicine.jpeg" alt="Nobel 5" onclick="showDescription('Nobel 5')">
-         <img src="Images/chemistry.jpeg" alt="Nobel 6" onclick="showDescription('Nobel 6')">
+         <img src="Images/physics.jpeg" alt="Nobel 6" onclick="showDescription('Nobel 6')">
       </div>
       <div class="description" id="descBox">
+         <img id="descImage" src="Images/chemistry.jpeg" alt="Nobel Prize Winner" style="width: 40%; height: auto;">
          <p id="descText"></p>
+         <div class="nobel-info">
+            <a href="https://www.nobelprize.org" target="_blank" id="nobelLink">¡Descubre más en el sitio de la Academia de los Nobel!</a>
+         </div>
          <button onclick="closeDescription()">Cerrar</button>
       </div>
       <script>
+         let isAnimating = false;
+         
          function showDescription(nobel) {
              const descriptions = {
-                 'Nobel 1': 'Descripción del Nobel 1...',
-                 'Nobel 2': 'Descripción del Nobel 2...',
-                 'Nobel 3': 'Descripción del Nobel 3...',
-                 'Nobel 4': 'Descripción del Nobel 4...',
-                 'Nobel 5': 'Tenemos el primer Nobel de la semana!🏅 La Asamblea Nobel del Instituto Karolinska otorgó hoy el Premio Nobel de Fisiología o Medicina 2023 a Katalin Karikó y Drew Weissman por sus descubrimientos en la modificación de nucleósidos que permitieron las vacunas de ARNm eficaces contra la COVID-19, revolucionando la respuesta ante la pandemia de 2020. Sus hallazgos innovadores cambiaron la comprensión de la interacción del ARNm con el sistema inmunológico y aceleraron el desarrollo de vacunas en una crisis de salud sin precedentes.',
-                 'Nobel 6': 'Descripción del Nobel 6...',
+         'Nobel 1': {
+         text: 'Narges Mohammadi fue galardonada con el Premio Nobel de la Paz por su incansable lucha contra la opresión de las mujeres y la promoción de los derechos humanos en Irán, a pesar de enfrentar arrestos, condenas y encarcelamiento prolongado. Su activismo cobró mayor relevancia tras la muerte de Mahsa Jina Amini en 2022, que desencadenó protestas masivas contra el régimen iraní. Mohammadi, desde sus días como estudiante y luego como ingeniera y activista, ha sido una voz firme contra la pena de muerte y la violencia en las prisiones. Desde su encierro, ha continuado liderando y apoyando las protestas, convirtiéndose en un símbolo de resistencia y esperanza. El reconocimiento del Comité Nobel no solo honra su valentía sino también la de miles que han luchado por la justicia y la igualdad en Irán.',
+         imgUrl: 'Images/activist.jpg',
+         linkUrl: 'https://www.nobelprize.org/prizes/peace/2023/summary'
+         },
+         'Nobel 2': {
+         text: 'La galardonada este año con el Premio de Ciencias Económicas, Claudia Goldin, ha presentado el primer estudio integral sobre los ingresos y la participación de la mujer en el mercado laboral a lo largo de los siglos. Su investigación revela las causas del cambio, así como las principales fuentes de la brecha de género que aún persiste.',
+         imgUrl: 'Images/economist.jpg',
+         linkUrl: 'https://www.nobelprize.org/prizes/economic-sciences/2023/summary/'
+         },
+         'Nobel 3': {
+         text: 'El Premio Nobel de Literatura 2023 fue otorgado a Jon Fosse, un influente autor, traductor y dramaturgo noruego, conocido por su estilo minimalista e introspectivo. Nacido en 1959, Fosse ha escrito más de setenta obras, incluyendo novelas y obras de teatro, las cuales han sido traducidas a más de cincuenta idiomas. Destacado por continuar la tradición de Henrik Ibsen, es uno de los dramaturgos noruegos más representados a nivel mundial. Entre sus reconocimientos, ha sido nombrado Chevalier de la Ordre national du Mérite en Francia y recibió el Premio de Literatura del Consejo Nórdico en 2015.',
+         imgUrl: 'Images/writer.jpg',
+         linkUrl: 'https://www.nobelprize.org/prizes/literature/2023/summary'
+         },
+         'Nobel 4': {
+         text: 'El Premio Nobel de Química 2023 premia el descubrimiento y desarrollo de los puntos cuánticos, nanopartículas tan diminutas que su tamaño determina sus propiedades. Estos pequeñísimos componentes de la nanotecnología propagan ahora la luz de televisores y lámparas LED, y también pueden guiar a los cirujanos cuando extirpan tejido tumoral, entre otras muchas cosas.',
+         imgUrl: 'Images/chemists.jpg',
+         linkUrl: 'https://www.nobelprize.org/prizes/chemistry/2023/summary'
+         },
+         'Nobel 5': {
+         text: 'Los descubrimientos de los dos galardonados del Nobel fueron fundamentales para desarrollar vacunas eficaces a base de ARNm contra el COVID-19 durante la pandemia que comenzó a principios de 2020. Gracias a sus revolucionarios descubrimientos, que han modificado fundamentalmente nuestra comprensión de cómo interactúa el ARNm con nuestro sistema inmunitario, los galardonados contribuyeron al ritmo sin precedentes de desarrollo de vacunas durante una de las mayores amenazas para la salud humana de la era moderna.',
+         imgUrl: 'Images/medics.jpg',
+         linkUrl: 'https://www.nobelprize.org/prizes/medicine/2023/summary/'
+         },
+         'Nobel 6': {
+         text: 'Los tres galardonados con el Premio Nobel de Física 2023 han sido reconocidos por sus experimentos, que han proporcionado a la humanidad nuevas herramientas para explorar el mundo de los electrones en el interior de átomos y moléculas. Pierre Agostini, Ferenc Krausz y Anne L\'Huillier han demostrado una forma de crear pulsos de luz extremadamente breves que pueden utilizarse para medir los procesos acelerados en los que los electrones se mueven o cambian de energía.',
+         imgUrl: 'Images/physicists.jpg',
+         linkUrl: 'https://www.nobelprize.org/prizes/physics/2023/summary'
+         }
+         
              };
+             if (isAnimating) return;
+               isAnimating = true;
+         
          
              const descBox = document.getElementById('descBox');
+             const descImage = document.getElementById('descImage');
              const descText = document.getElementById('descText');
+             const nobelLink = document.getElementById('nobelLink');
          
-             descText.textContent = descriptions[nobel];
-             descBox.style.display = 'block';
+         if (descriptions[nobel]) {
+         // Actualiza la imagen
+         descImage.src = descriptions[nobel].imgUrl;
+         descImage.alt = `Nobel Prize Winner in ${nobel}`;
+         
+         // Actualiza el texto de la descripción
+         descText.textContent = descriptions[nobel].text;
+         
+         // Actualiza el enlace
+         nobelLink.href = descriptions[nobel].linkUrl;
+         nobelLink.textContent = '¡Descubre más sobre este premio Nobel!';
+           
+         // Reset any existing animations
+         descBox.classList.remove('closing');
+         
+         // Muestra la caja descriptiva
+         descBox.style.display = 'block';
+         
+           // Wait for the animation to end before resetting the flag
+         setTimeout(() => {
+         isAnimating = false;
+         }, 500); // This should match the duration of your fade-in animation
+         } else {
+         console.error('No description found for:', nobel);
+         }
          }
          
          function closeDescription() {
-             document.getElementById('descBox').style.display = 'none';
+         
+            if (isAnimating) return;
+         isAnimating = true;
+         
+         const descBox = document.getElementById('descBox');
+         
+         // Start fade-out animation
+         descBox.classList.add('closing');
+         
+         // Wait for the fade-out animation to complete before hiding the box
+         setTimeout(() => {
+         descBox.style.display = 'none';
+         descBox.classList.remove('closing');
+         isAnimating = false;
+         }, 500); // This should match the duration of your fade-out animation
          }
          
       </script>
       <footer>
          <div class="text-and-links">
-         <p id="copyright-notice"> Ilustraciones por Niklas Elmehed. © 2023 Nobel Prize Outreach. Todos los derechos reservados.</p>
-         <div class="links-container">
-            <p><a href="https://www.enesmorelia.unam.mx/" target="_blank">UNAM ENES Morelia</a></p>
-            <p><a href="https://www.instagram.com/descubriendolosnobel/" target="_blank">Instagram</a></p>
-            <p><a href="https://www.facebook.com/..." target="_blank">Facebook</a></p>
-            <a href="">Contacto</a>
-         </div>
+            <p id="copyright-notice"> Ilustraciones por Niklas Elmehed. © 2023 Nobel Prize Outreach. Todos los derechos reservados.</p>
+            <div class="links-container">
+               <p><a href="https://www.enesmorelia.unam.mx/" target="_blank">UNAM ENES Morelia</a></p>
+               <p><a href="https://www.instagram.com/descubriendolosnobel/" target="_blank">Instagram</a></p>
+               <p><a href="https://www.facebook.com/..." target="_blank">Facebook</a></p>
+               <a href="">Contacto</a>
+            </div>
          </div>
       </footer>
    </body>
