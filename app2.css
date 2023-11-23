@@ -105,3 +105,26 @@ footer {
     margin: 20px 0; /* Agrega espacio antes y después del párrafo */
     font-size: 1.0em; /* Aumenta el tamaño del texto */
 }
+
+.google-drive-link {
+  position: absolute; /* Posicionamiento absoluto respecto al contenedor más cercano posicionado */
+  top: 0; /* Alineado con la parte superior de la página */
+  left: 0; /* Alineado con el lado izquierdo de la página */
+  margin: 10px; /* Un pequeño margen para que no esté pegado al borde */
+}
+
+.google-drive-link button {
+  padding: 10px 10px;
+  top: 25px;
+  left: 20px;
+  background-color: #235c8e; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse por encima */
+  transition: background-color 0.3s;
+}
+
+.google-drive-link button:hover {
+  background-color: #ddd; /* Color al pasar el mouse por encima */
+}
