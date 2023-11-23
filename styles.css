@@ -102,10 +102,9 @@ footer {
 
 #logo-footer {
   position: absolute;
-  top: 0;
-  left: 10px;
-  margin: 10px; /* Ajusta el margen según tus preferencias */
-  width: 250px;
+  top: 20px;
+  left: 30px;
+  width: 220px;
   height: auto
 }
 
@@ -156,8 +155,8 @@ article p {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 300px); /* Cambiamos el tamaño de las columnas */
-  gap: 50px; /* Reducimos el espacio entre las imágenes */
+  grid-template-columns: repeat(3, 400px); /* Cambiamos el tamaño de las columnas */
+  gap: 30px; /* Reducimos el espacio entre las imágenes */
   justify-content: center; /* Centra la cuadrícula horizontalmente */
 }
 
