@@ -1,82 +1,105 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conferencias</title>
-    <link rel="stylesheet" href="app.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-     </style>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conferencias anteriores</title>
+<link rel="stylesheet" href="app2.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+ </style>
+<script>
+function openYear(evt, year) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
+  // Get all elements with class="tab-content" and hide them
+  tabcontent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(year).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</head>
+<h1>Conferencias anteriores</h1>
 
 <body>
+    <p id = 'instructions'>Selecciona el año de las conferencias que desees explorar</p>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" nonce="gNfpEM3J"></script>
     <header>
         <a href="https://www.facebook.com/BigdataScienceMexico"><img src="Images/trix.png" alt="Logo de carrera" class="logo-tics"></a>
-    </header>
+        <div class="google-drive-link">
+          <a href="https://drive.google.com/drive/folders/1w6vurYcblIfq0XS1cuMufm-tK9JJqTbG?usp=drive_link" target="_blank">
+              <button>Descarga las conferencias</button>
+          </a>
+      </div>
     
-
-    <h1>Próximas conferencias</h1>
-
-    <!-- Conferencia 1 -->
-    <div class="conferencia">
-        <h2>Medicina y Fisiología: El primo Neanderthal que todos llevamos dentro</h2>
-        <p>25 de Noviembre de 2023, 18:00 hrs</p>
-        <p>Dr. Victor Hugo Anaya Muñoz</p>
-        <p>ENES Morelia</p>
-        <a href="#">Transmisión en vivo</a>
-    </div>
-
-    <!-- Conferencia 2 -->
-    <div class="conferencia">
-        <h2>Literatura: Barquera entre dos orillas. El estilo Ernaux</h2>
-        <p>10 de Diciembre de 2023</p>
-        <p>Dra. Martha Cecilia Jaime Gonzáles </p>
-        <p>Facultad de Filosofía y Letras UNAM</p>
-        <a href="#">Transmisión en vivo</a>
-    </div>
-
-    <!-- Conferencia 3 -->
-    <div class="conferencia">
-        <h2>Paz: Premio Nobel de la Paz para la sociedad civil de Ucrania, Bielorrusia y Rusia</h2>
-        <p>15 de Enero de 2024</p>
-        <p>Dra. Anastasia Krutitskaya</p>
-        <p>ENES Morelia</p>
-        <a href="#">Transmisión en vivo</a>
-    </div>
-
-    <!-- Conferencia 4 -->
-    <div class="conferencia">
-        <h2>Química: La química en un click: creando moléculas de manera sencilla</h2>
-        <p>15 de Enero de 2024</p>
-        <p>Dra. Luis Eduardo Servín Garcidueñas</p>
-        <p>ENES Morelia</p>
-        <a href="#">Transmisión en vivo</a>
-    </div>
-
-    <!-- Conferencia 5 -->
-    <div class="conferencia">
-        <h2>Física: El principio de localidad y las mediciones cuidadosas del entrelazamiento cuántico</h2>
-        <p>15 de Enero de 2024</p>
-        <p>Dr. José Antonio Zapata</p>
-        <p>Centro de Ciencias Matemáticas, UNAM</p>
-        <a href="#">Transmisión en vivo</a>
-    </div>
+      </header>
     
-    <!-- Conferencia 6 -->
-    <div class="conferencia">
-        <h2>Economía: Regulación bancaria. Entre rumores, profecías autocumplidas y colapsos bancarios</h2>
-        <p>15 de Enero de 2024</p>
-        <p>Mtra. Claudia Escalera Matamoros</p>
-        <p>ENES Morelia</p>
-        <a href="#">Transmisión en vivo</a>
-    </div>
+<div class="tab-container">
+  <button class="tablinks" onclick="openYear(event, '2020')">2020</button>
+  <button class="tablinks" onclick="openYear(event, '2021')">2021</button>
+  <button class="tablinks" onclick="openYear(event, '2022')">2022</button>
+</div>
 
+<div id="2020" class="tab-content">
+  <h2>Conferencias de 2020</h2>
+  <ul>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=204541221157393">Premio Nobel de Física</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=4055015311192512">Premio Nobel de la Paz</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=183719303445050">Premio Nobel de Economía</a></li>
+    <li><a href="https://www.facebook.com/EnesMoreliaUnam/videos/213773093735057/">Premio Nobel de Química</a></li>
+    <li><a href="https://www.facebook.com/BigdataScienceMexico/videos/223141642520840/">Premio Nobel de Medicina</a></li>
+    <li><a href="https://www.facebook.com/BigdataScienceMexico/videos/1316330265378688/">Premio Nobel de Literatura</a></li>
+</ul>
+</div>
+
+<div id="2021" class="tab-content">
+  <h2>Conferencias de 2021</h2>
+  <ul>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=447012156834974">Premio Nobel de Física</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=452263939865608">Premio Nobel de la Paz</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=637450471031164">Premio Nobel de Economía</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=428776852131590">Premio Nobel de Química</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=445335440295107">Premio Nobel de Medicina</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=207277128262127">Premio Nobel de Literatura</a></li>
+</ul>
+</div>
+
+<div id="2022" class="tab-content">
+  <h2> Conferencias de 2022</h2>
+  <ul>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=1187200602215523">Premio Nobel de Física</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=1136529406998345">Premio Nobel de la Paz</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=523707196351041">Premio Nobel de Economía</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=1276772759558269">Premio Nobel de Química</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=505888018170067">Premio Nobel de Medicina</a></li>
+    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=681397783647387">Premio Nobel de Literatura</a></li>
+
+</ul>
+</div>
+
+<div class="fb-video" data-href="https://www.facebook.com/EnesMoreliaUnam/videos/204541221157393/" data-width="2000" data-show-text="false"><blockquote cite="https://www.facebook.com/EnesMoreliaUnam/videos/204541221157393/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EnesMoreliaUnam/videos/204541221157393/">Descubriendo a los Nobel 2020. Premio de Física</a><p>Descubriendo a los Nobel 2020. Premio de Física.
+    ¿Existen los agujeros negros?</p>Posted by <a href="https://facebook.com/EnesMoreliaUnam">ENES Unidad Morelia, UNAM</a> on Thursday, December 10, 2020</blockquote></div>
+<script>
+// Get the element with id="defaultOpen" and click on it
+// This will make the "2020" tab open by default (you can change it to the current year)
+document.getElementsByClassName("tablinks")[0].click();
+</script>
 <footer>
     <div class="text-and-links">
-    <p id="copyright-notice"> Ilustraciones por Niklas Elmehed. © 2023 Nobel Prize Outreach. Todos los derechos reservados.</p>
+    <p id="copyright-notice"> Todos los derechos reservados.</p>
     <div class="links-container">
        <p><a href="https://www.enesmorelia.unam.mx/" target="_blank">UNAM ENES Morelia</a></p>
        <p><a href="https://www.instagram.com/descubriendolosnobel/" target="_blank">Instagram</a></p>
@@ -86,5 +109,4 @@
     <a href="https://www.enesmorelia.unam.mx/"><img src="Images/logos-ENES.png" alt="Logo de UNAM ENES Morelia" id="logo-footer" loading="lazy"> </a>
  </footer>
 </body>
-
 </html>
