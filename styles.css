@@ -1,300 +1,242 @@
 /* styles.css */
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
+font-family: 'Roboto', sans-serif;
+margin: 0;
+padding: 0;
 }
-
 header {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding-top: 45px;
-  position: relative;
-  padding-bottom: 30px;
+background-color: #ffffff;
+color: rgb(0, 0, 0);
+text-align: center;
+padding-top: 45px;
+position: relative;
+padding-bottom: 30px;
 }
-
 header p {
-  max-width: 70%; 
-  text-align: center;
-  padding-left: 175px;
+max-width: 70%; 
+text-align: center;
+padding-left: 175px;
 }
-
 .logo-tics {
-  position: absolute;
-  top: 20px; 
-  right: 30px; 
-  width: 200px; 
-  height: auto;
+position: absolute;
+top: 20px; 
+right: 30px; 
+width: 200px; 
+height: auto;
 }
 nav ul {
-  list-style-type: none;
-  margin: 0;
+list-style-type: none;
+margin: 0;
 }
-
 nav li {
-  display: inline;
-  margin: 15px;
+display: inline;
+margin: 15px;
 }
-
 nav a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
+color: rgb(0, 0, 0);
+text-decoration: none;
 }
-
 .cta-button {
-  background-color: #235c8e;
-  color: rgb(255, 255, 255);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
+background-color: #235c8e;
+color: rgb(255, 255, 255);
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+margin-top: 20px;
 }
-
 @media (max-width: 768px) {
-  nav li {
-    display: block;
-    margin: 10px;
-  }
-
-  nav ul {
-    text-align: center;
-    padding: 15px;
-  }
+nav li {
+display: block;
+margin: 10px;
 }
-
+nav ul {
+text-align: center;
+padding: 15px;
+}
+}
 img {
-  width: 500px;  /* Or any other size you prefer */
-  height: auto;  /* Maintains the aspect ratio */
+width: 500px;  /* Or any other size you prefer */
+height: auto;  /* Maintains the aspect ratio */
 }
-
 h2 {
-  margin-left: 30px;  /* Adjust the value as needed to achieve the desired position */
+margin-left: 30px;  /* Adjust the value as needed to achieve the desired position */
 }
-
 #nobel_title {
-  font-weight: bold;
-  text-align: center;
+font-weight: bold;
+text-align: center;
 }
-
 #landing-description{
-  text-align: center;
+text-align: center;
 }
-
 @media (max-width: 768px) {
-  footer {
-      flex-direction: column;
-  }
-}
-
 footer {
-  position: relative; 
-  background-color: #f9f9f9;
-  padding: 15px;
-  text-align: center;
-  border-top: 2px solid #ddd;
-  margin-top: 15px;
+flex-direction: column;
 }
-
-
+}
+footer {
+position: relative; 
+background-color: #f9f9f9;
+padding: 15px;
+text-align: center;
+border-top: 2px solid #ddd;
+margin-top: 15px;
+}
 #logo-footer {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  width: 220px;
-  height: auto
+position: absolute;
+top: 20px;
+left: 30px;
+width: 220px;
+height: auto
 }
-
 .links-container {
-  display: flex;
-  flex-direction: row;
-  margin-right: 20px;  
+display: flex;
+flex-direction: row;
+margin-right: 20px;  
 }
-
 .links-container p {
-  margin-right: 20px;  /* Adjust the value to get the desired spacing */
+margin-right: 20px;  /* Adjust the value to get the desired spacing */
 }
-
-
 .text-and-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
-
-
 article {
-  padding-left: 20px; /* Adjust the value as needed */
-  padding-right: 20px;
+padding-left: 20px; /* Adjust the value as needed */
+padding-right: 20px;
 }
 article p {
-  text-align: justify;
+text-align: justify;
 }
-
-
-
 .full-width-image {
-  display: block;
-  width: 100%;        
-  height: auto;       
-  margin: 0;          
-  border: none;      
-  max-height: 600px;  
+display: block;
+width: 100%;        
+height: auto;       
+margin: 0;          
+border: none;      
+max-height: 600px;  
 }
-
 .image-description {
-  text-align: center; /* Centra el texto horizontalmente */
-  margin-top: 10px;   /* Espaciado superior opcional */
+text-align: center; /* Centra el texto horizontalmente */
+margin-top: 10px;   /* Espaciado superior opcional */
 }
-
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 400px); /* Cambiamos el tamaño de las columnas */
-  gap: 30px; /* Reducimos el espacio entre las imágenes */
-  justify-content: center; /* Centra la cuadrícula horizontalmente */
+display: grid;
+grid-template-columns: repeat(3, 400px); /* Cambiamos el tamaño de las columnas */
+gap: 30px; /* Reducimos el espacio entre las imágenes */
+justify-content: center; /* Centra la cuadrícula horizontalmente */
 }
-
 .grid img {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+width: 100%;
+height: 100%;
+cursor: pointer;
 }
-
 .description {
-  display: none;
-  background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1000px; /* Reducimos el tamaño del cuadro de descripción */
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+display: none;
+background-color: white;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 1000px; /* Reducimos el tamaño del cuadro de descripción */
+padding: 1rem;
+border-radius: 5px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+text-align: center;
 }
-
-
 #second-title{
-  text-align: center;
+text-align: center;
 }
-
 #second-description{
-  text-align: center;
+text-align: center;
 }
-
 #history h2{
-  text-align: center;
-  padding-left: 20px;
+text-align: center;
+padding-left: 20px;
 }
-
 h2 + p {
-  text-align: justify;
-  padding-left: 20px;
+text-align: justify;
+padding-left: 20px;
 }
-
-
-
 #impact h2{
-  text-align: center;
-  padding-left: 20px;
+text-align: center;
+padding-left: 20px;
 }
-
 /* Existing styles */
 /* ... */
-
 /* Fade-in and fade-out animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+from { opacity: 0; }
+to { opacity: 1; }
 }
-
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+from { opacity: 1; }
+to { opacity: 0; }
 }
-
 .description {
-  /* Change position to fixed */
-  position: fixed;
-  /* Center the box */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* Ensure it's on top of other elements */
-  z-index: 1000; /* You can adjust this value as needed */
-  
-  /* Other existing styles... */
-  width: 750px;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  background-color: #ecebe6;
-  display: none; /* Initial state */
-  animation: fadeIn 0.5s;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1000;
+width: 450px; /* Increased width */
+padding: 1rem;
+border-radius: 5px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+text-align: center;
+background-color: #ffffff;
+display: none; /* Initial state */
+animation: fadeIn 0.5s;
 }
-
-.description.closing {
-  animation: fadeOut 0.5s; /* Fade-out animation */
-}
-
 /* Responsive image styles */
 #descImage {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px; /* Space between image and text */
+max-width: 100%;  /* Ensures image is responsive and fits within .description */
+height: auto; /*Maintains the aspect ratio of the image */
 }
-
 /* Nobel Academy link styles */
 #nobelLink {
-  display: inline-block;
-  margin-top: 20px;
-  color: #235c8e; /* Matching color scheme */
-  text-decoration: none;
-  border-bottom: 1px solid #235c8e; /* Underline effect */
+display: inline-block;
+margin-top: 20px;
+color: #235c8e; /* Matching color scheme */
+text-decoration: none;
+border-bottom: 1px solid #235c8e; /* Underline effect */
 }
-
 /* Additional media queries for responsiveness */
 @media (max-width: 768px) {
-  .description {
-    width: 90%; /* Smaller width on smaller screens */
-    padding: 10px; /* Adjust padding */
-  }
+.description {
+width: 90%; /* Smaller width on smaller screens */
+padding: 10px; /* Adjust padding */
 }
-
+}
 /* Estilos existentes para .description y otros elementos... */
-
 /* Estilizando el botón */
 .description button {
-  background-color: #235c8e; /* Color de fondo */
-  color: white; /* Color de texto */
-  border: none; /* Sin bordes */
-  padding: 10px 20px; /* Relleno */
-  margin-top: 20px; /* Espacio encima del botón */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cursor de mano para indicar que es clickeable */
-  font-size: 1em; /* Tamaño de la letra */
-  transition: background-color 0.3s; /* Transición suave al cambiar de color */
+background-color: #235c8e; /* Color de fondo */
+color: white; /* Color de texto */
+border: none; /* Sin bordes */
+padding: 10px 20px; /* Relleno */
+margin-top: 20px; /* Espacio encima del botón */
+border-radius: 5px; /* Bordes redondeados */
+cursor: pointer; /* Cursor de mano para indicar que es clickeable */
+font-size: 1em; /* Tamaño de la letra */
+transition: background-color 0.3s; /* Transición suave al cambiar de color */
 }
-
 .description button:hover {
-  background-color: #1e5078; /* Color de fondo al pasar el ratón por encima */
+background-color: #1e5078; /* Color de fondo al pasar el ratón por encima */
 }
-
 /* Asegúrate de que el enlace y el botón estén uno tras otro en el HTML */
-
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+from { opacity: 1; }
+to { opacity: 0; }
 }
-
 .closing {
-  animation: fadeOut 0.5s;
+animation: fadeOut 0.5s;
+}
+#descText {
+text-align: justify; /* This will justify the text inside the element with ID #descText */
+/* Other styles for #descText can go here */
 }
