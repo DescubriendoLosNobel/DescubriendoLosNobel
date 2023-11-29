@@ -12,19 +12,27 @@
    </head>
    <body>
       <header>
-         <a href="https://www.facebook.com/BigdataScienceMexico"> <img src="Images/trix.png" alt="Logo de carrera" class="logo-tics"></a>
-         <nav>
-            <ul>
-               <li><a href="#second-title">Premios del año</a></li>
-               <li><a href="about.html">Acerca de los Nobel</a></li>
-               <li><a href="articles.html">Artículos</a></li>
-               <li><a href="past-conferences.html">Conferencias anteriores</a></li>
-            </ul>
-            <a href="https://www.enesmorelia.unam.mx/"><img src="Images/logos-ENES.png" alt="Logo de UNAM ENES Morelia" id="logo-footer" loading="lazy"> </a>
-         </nav>
-         <h1>Descubriendo los Nobel</h1>
-         <p id="landing-description"> Descubre el ciclo anual de conferencias acerca de los ganadores del Premio Nobel impartidas por distinguidos investigadores y profesionales de la UNAM y de otras instituciones académicas mexicanas.</p>
-         <a href="future-conferences.html" class="cta-button">Explora las Conferencias</a>
+         <div class="header-top">
+            <a href="https://www.facebook.com/BigdataScienceMexico">
+            <img src="Images/trix.png" alt="Logo de carrera" class="logo-tics">
+            </a>
+            <nav>
+               <ul>
+                  <li><a href="#second-title">Premios del año</a></li>
+                  <li><a href="about.html">Acerca de los Nobel</a></li>
+                  <li><a href="articles.html">Artículos</a></li>
+                  <li><a href="past-conferences.html">Conferencias anteriores</a></li>
+               </ul>
+               <a href="https://www.enesmorelia.unam.mx/">
+               <img src="Images/logos-ENES.png" alt="Logo de UNAM ENES Morelia" id="logo-footer" loading="lazy">
+               </a>
+            </nav>
+         </div>
+         <div class="header-bottom">
+            <h1>Descubriendo los Nobel</h1>
+            <p id="landing-description">Descubre el ciclo anual de conferencias acerca de los ganadores del Premio Nobel impartidas por distinguidos investigadores y profesionales de la UNAM y de otras instituciones académicas mexicanas.</p>
+            <a href="future-conferences.html" class="cta-button">Explora las Conferencias</a>
+         </div>
       </header>
       <img src="Images/nobel_pres.jpg" alt="Medalla de los Nobel" class="full-width-image">
       <p class="image-description">Medalla de los Nobel. &copy;The Nobel Foundation.</p>
@@ -54,33 +62,33 @@
          function showDescription(nobel) {
              const descriptions = {
          'Nobel 1': {
-         text: 'Narges Mohammadi fue galardonada con el Premio Nobel de la Paz por su incansable lucha contra la opresión de las mujeres y la promoción de los derechos humanos en Irán, a pesar de enfrentar arrestos, condenas y encarcelamiento prolongado. Su activismo cobró mayor relevancia tras la muerte de Mahsa Jina Amini en 2022, que desencadenó protestas masivas contra el régimen iraní. Mohammadi, desde sus días como estudiante y luego como ingeniera y activista, ha sido una voz firme contra la pena de muerte y la violencia en las prisiones. Desde su encierro, ha continuado liderando y apoyando las protestas, convirtiéndose en un símbolo de resistencia y esperanza. El reconocimiento del Comité Nobel no solo honra su valentía sino también la de miles que han luchado por la justicia y la igualdad en Irán.',
-         imgUrl: 'Images/activist.jpg',
+         text: 'Narges Mohammadi fue galardonada con el Premio Nobel de la Paz por su incansable lucha contra la opresión de las mujeres y la promoción de los derechos humanos en Irán, a pesar de enfrentar arrestos, condenas y encarcelamiento prolongado. <br> <br>   Mohammadi, desde sus días como estudiante y luego como ingeniera y activista, ha sido una voz firme contra la pena de muerte y la violencia en las prisiones.  Desde su encierro, ha continuado liderando y apoyando las protestas, convirtiéndose en un símbolo de resistencia y esperanza. El reconocimiento del Comité Nobel no solo honra su valentía sino también la de miles que han luchado por la justicia y la igualdad en Irán.',
+         imgUrl: 'Images/activist.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/peace/2023/summary'
          },
          'Nobel 2': {
          text: 'La galardonada este año con el Premio de Ciencias Económicas, Claudia Goldin, ha presentado el primer estudio integral sobre los ingresos y la participación de la mujer en el mercado laboral a lo largo de los siglos. Su investigación revela las causas del cambio, así como las principales fuentes de la brecha de género que aún persiste.',
-         imgUrl: 'Images/economist.jpg',
+         imgUrl: 'Images/economist.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/economic-sciences/2023/summary/'
          },
          'Nobel 3': {
-         text: 'El Premio Nobel de Literatura 2023 fue otorgado a Jon Fosse, un influente autor, traductor y dramaturgo noruego, conocido por su estilo minimalista e introspectivo. Nacido en 1959, Fosse ha escrito más de setenta obras, incluyendo novelas y obras de teatro, las cuales han sido traducidas a más de cincuenta idiomas. Destacado por continuar la tradición de Henrik Ibsen, es uno de los dramaturgos noruegos más representados a nivel mundial. Entre sus reconocimientos, ha sido nombrado Chevalier de la Ordre national du Mérite en Francia y recibió el Premio de Literatura del Consejo Nórdico en 2015.',
-         imgUrl: 'Images/writer.jpg',
+         text: 'El Premio Nobel de Literatura 2023 fue otorgado a Jon Fosse, un influente autor, traductor y dramaturgo noruego, conocido por su estilo minimalista e introspectivo. Nacido en 1959, Fosse ha escrito más de setenta obras, incluyendo novelas y obras de teatro, las cuales han sido traducidas a más de cincuenta idiomas. <br> <br> Destacado por continuar la tradición de Henrik Ibsen, es uno de los dramaturgos noruegos más representados a nivel mundial. Entre sus reconocimientos, ha sido nombrado Chevalier de la Ordre national du Mérite en Francia y recibió el Premio de Literatura del Consejo Nórdico en 2015.',
+         imgUrl: 'Images/writer.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/literature/2023/summary'
          },
          'Nobel 4': {
          text: 'El Premio Nobel de Química 2023 premia el descubrimiento y desarrollo de los puntos cuánticos, nanopartículas tan diminutas que su tamaño determina sus propiedades. Estos pequeñísimos componentes de la nanotecnología propagan ahora la luz de televisores y lámparas LED, y también pueden guiar a los cirujanos cuando extirpan tejido tumoral, entre otras muchas cosas.',
-         imgUrl: 'Images/chemists.jpg',
+         imgUrl: 'Images/chemists.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/chemistry/2023/summary'
          },
          'Nobel 5': {
-         text: 'Los descubrimientos de los dos galardonados del Nobel fueron fundamentales para desarrollar vacunas eficaces a base de ARNm contra el COVID-19 durante la pandemia que comenzó a principios de 2020. Gracias a sus revolucionarios descubrimientos, que han modificado fundamentalmente nuestra comprensión de cómo interactúa el ARNm con nuestro sistema inmunitario, los galardonados contribuyeron al ritmo sin precedentes de desarrollo de vacunas durante una de las mayores amenazas para la salud humana de la era moderna.',
-         imgUrl: 'Images/medics.jpg',
+         text: 'Los descubrimientos de los dos galardonados del Nobel fueron fundamentales para desarrollar vacunas eficaces a base de ARNm contra el COVID-19 durante la pandemia que comenzó a principios de 2020. <br> Gracias a sus revolucionarios descubrimientos, que han modificado fundamentalmente nuestra comprensión de cómo interactúa el ARNm con nuestro sistema inmunitario, los galardonados contribuyeron al ritmo sin precedentes de desarrollo de vacunas durante una de las mayores amenazas para la salud humana de la era moderna.',
+         imgUrl: 'Images/medics.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/medicine/2023/summary/'
          },
          'Nobel 6': {
-         text: 'Los tres galardonados con el Premio Nobel de Física 2023 han sido reconocidos por sus experimentos, que han proporcionado a la humanidad nuevas herramientas para explorar el mundo de los electrones en el interior de átomos y moléculas. Pierre Agostini, Ferenc Krausz y Anne L\'Huillier han demostrado una forma de crear pulsos de luz extremadamente breves que pueden utilizarse para medir los procesos acelerados en los que los electrones se mueven o cambian de energía.',
-         imgUrl: 'Images/physicists.jpg',
+         text: 'Los tres galardonados con el Premio Nobel de Física 2023 han sido reconocidos por sus experimentos, que han proporcionado a la humanidad nuevas herramientas para explorar el mundo de los electrones en el interior de átomos y moléculas.'+ '<br> <br>' +'Pierre Agostini, Ferenc Krausz y Anne L\'Huillier han demostrado una forma de crear pulsos de luz extremadamente breves que pueden utilizarse para medir los procesos acelerados en los que los electrones se mueven o cambian de energía.',
+         imgUrl: 'Images/physicists.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/physics/2023/summary'
          }
          
@@ -99,8 +107,8 @@
          descImage.src = descriptions[nobel].imgUrl;
          descImage.alt = `Nobel Prize Winner in ${nobel}`;
          
-         // Actualiza el texto de la descripción
-         descText.textContent = descriptions[nobel].text;
+         // Use innerHTML instead of textContent
+         descText.innerHTML = descriptions[nobel].text;
          
          // Actualiza el enlace
          nobelLink.href = descriptions[nobel].linkUrl;
@@ -147,7 +155,7 @@
                <p><a href="https://www.enesmorelia.unam.mx/" target="_blank">UNAM ENES Morelia</a></p>
                <p><a href="https://www.instagram.com/descubriendolosnobel/" target="_blank">Instagram</a></p>
                <p><a href="https://www.facebook.com/..." target="_blank">Facebook</a></p>
-               <a href="">Contacto</a>
+               <p><a href="link-to-contact" target="_blank">Contacto</a></p>
             </div>
          </div>
       </footer>
