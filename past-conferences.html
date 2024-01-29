@@ -35,8 +35,6 @@ function openYear(evt, year) {
 
 <body>
     <p id = 'instructions'>Selecciona el año de las conferencias que desees explorar</p>
-    <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" nonce="gNfpEM3J"></script>
     <header>
         <a href="https://www.facebook.com/BigdataScienceMexico"><img src="Images/trix.png" alt="Logo de carrera" class="logo-tics"></a>
         <div class="google-drive-link">
@@ -47,66 +45,78 @@ function openYear(evt, year) {
     
       </header>
     
-<div class="tab-container">
-  <button class="tablinks" onclick="openYear(event, '2020')">2020</button>
-  <button class="tablinks" onclick="openYear(event, '2021')">2021</button>
-  <button class="tablinks" onclick="openYear(event, '2022')">2022</button>
+
+<div class="selector-container">
+  <select id="yearSelector">
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+  </select>
+  <select id="prizeSelector">
+    <option value="fisica">Premio Nobel de Física</option>
+    <option value="paz">Premio Nobel de la Paz</option>
+    <option value="economia">Premio Nobel de Economía</option>
+    <option value="quimica">Premio Nobel de Química</option>
+    <option value="medicina">Premio Nobel de Medicina</option>
+    <option value="literatura">Premio Nobel de Literatura</option>
+  </select>
+  <button onclick="changeVideo()">Ver Conferencia</button>
 </div>
 
-<div id="2020" class="tab-content">
-  <h2>Conferencias de 2020</h2>
-  <ul>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=204541221157393">Premio Nobel de Física</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=4055015311192512">Premio Nobel de la Paz</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=183719303445050">Premio Nobel de Economía</a></li>
-    <li><a href="https://www.facebook.com/EnesMoreliaUnam/videos/213773093735057/">Premio Nobel de Química</a></li>
-    <li><a href="https://www.facebook.com/BigdataScienceMexico/videos/223141642520840/">Premio Nobel de Medicina</a></li>
-    <li><a href="https://www.facebook.com/BigdataScienceMexico/videos/1316330265378688/">Premio Nobel de Literatura</a></li>
-</ul>
+
+<div class="player-container">
+  <iframe id="ytplayer" type="text/html" width="1280" height="720"
+    src="http://www.youtube.com/embed/VIDEO_ID"
+    frameborder="0"></iframe>
 </div>
 
-<div id="2021" class="tab-content">
-  <h2>Conferencias de 2021</h2>
-  <ul>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=447012156834974">Premio Nobel de Física</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=452263939865608">Premio Nobel de la Paz</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=637450471031164">Premio Nobel de Economía</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=428776852131590">Premio Nobel de Química</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=445335440295107">Premio Nobel de Medicina</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=207277128262127">Premio Nobel de Literatura</a></li>
-</ul>
-</div>
 
-<div id="2022" class="tab-content">
-  <h2> Conferencias de 2022</h2>
-  <ul>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=1187200602215523">Premio Nobel de Física</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=1136529406998345">Premio Nobel de la Paz</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=523707196351041">Premio Nobel de Economía</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=1276772759558269">Premio Nobel de Química</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=505888018170067">Premio Nobel de Medicina</a></li>
-    <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&v=681397783647387">Premio Nobel de Literatura</a></li>
-
-</ul>
-</div>
-
-<div class="fb-video" data-href="https://www.facebook.com/EnesMoreliaUnam/videos/204541221157393/" data-width="2000" data-show-text="false"><blockquote cite="https://www.facebook.com/EnesMoreliaUnam/videos/204541221157393/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EnesMoreliaUnam/videos/204541221157393/">Descubriendo a los Nobel 2020. Premio de Física</a><p>Descubriendo a los Nobel 2020. Premio de Física.
-    ¿Existen los agujeros negros?</p>Posted by <a href="https://facebook.com/EnesMoreliaUnam">ENES Unidad Morelia, UNAM</a> on Thursday, December 10, 2020</blockquote></div>
 <script>
-// Get the element with id="defaultOpen" and click on it
-// This will make the "2020" tab open by default (you can change it to the current year)
-document.getElementsByClassName("tablinks")[0].click();
+  const videos = {
+    2020: {
+      fisica: "0YM6MVoTzck?si=MUw2Uqeivd7OTK7J",
+      paz: "rPH7b-RdGhs?si=iuM4w6csgbWvQ0u4",
+      economia: "WXfj6VfRRLw?si=cOipr_h_Rki9fcjp",
+      quimica: "i0KZuZ_YZWc?si=fCxa628LCH4LgEKx",
+      medicina: "f3URflN97qA?si=NRXzdrAarfVEJ5yO",
+      literatura: "yM84VA3p4mY?si=D6C1B7JHTKa452PY"
+    },
+    2021: {
+      fisica: "xezoyEG6KwE?si=7qexkw6KxcD3ZYy9",
+      paz: "wm6zu5_zXBE?si=iImcdvG9sDvf1CpZ",
+      economia: "YuFq7clt5n4?si=W0ixrNEo6Y5YD03j",
+      quimica: "knOOqLLsVm8?si=k4aguWvrV3QSSaYu",
+      medicina: "GG00xLd5EfU?si=nLqNl8PpcqvY17oW",
+      literatura: "SAORBMXb0Bk?si=gusR3G2Kxo-E94MJ"
+    },
+    2022: {
+      fisica: "_m4acIIbXFE?si=eVciWFdee6B_cCzb",
+      paz: "hut3MHg7Kt0?si=N8i0p4HtH18AoAjS",
+      economia: "0xHo5_6ia_8?si=70hgXVygQRrvOLbl",
+      quimica: "YT3NNjSCIjA?si=GG-GDsXRj7sBJf4n",
+      medicina: "Rtf0hQwTaC0?si=EHMRGaHzn95ldCgv",
+      literatura: "JwTGFbL3XaY?si=_ysJDs9t4LkiKkiN"
+    }
+  };
+
+  function changeVideo() {
+    const year = document.getElementById('yearSelector').value;
+    const prize = document.getElementById('prizeSelector').value;
+    const videoId = videos[year][prize];
+    document.getElementById('ytplayer').src = `http://www.youtube.com/embed/${videoId}`;
+  }
 </script>
+
+
 <footer>
-    <div class="text-and-links">
-    <p id="copyright-notice"> Todos los derechos reservados.</p>
-    <div class="links-container">
-       <p><a href="https://www.enesmorelia.unam.mx/" target="_blank">UNAM ENES Morelia</a></p>
-       <p><a href="https://www.instagram.com/descubriendolosnobel/" target="_blank">Instagram</a></p>
-       <p><a href="https://www.facebook.com/..." target="_blank">Facebook</a></p>
-    </div>
-    </div>
-    <a href="https://www.enesmorelia.unam.mx/"><img src="Images/logos-ENES.png" alt="Logo de UNAM ENES Morelia" id="logo-footer" loading="lazy"> </a>
- </footer>
+  <div class="text-and-links">
+     <div class="links-container">
+        <p><a href="https://www.enesmorelia.unam.mx/" target="_blank">UNAM ENES Morelia</a></p>
+        <p><a href="https://www.instagram.com/descubriendolosnobel/" target="_blank">Instagram</a></p>
+        <p><a href="https://www.facebook.com/..." target="_blank">Facebook</a></p>
+        <p><a href="link-to-contact" target="_blank">Contacto</a></p>
+     </div>
+  </div>
+</footer>
 </body>
 </html>
