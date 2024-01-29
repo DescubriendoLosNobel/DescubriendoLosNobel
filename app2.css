@@ -128,3 +128,34 @@ footer {
 .google-drive-link button:hover {
   background-color: #ddd; /* Color al pasar el mouse por encima */
 }
+
+.player-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* O la altura que prefieras */
+}
+
+.selector-container {
+  margin: 20px;
+  text-align: center;
+}
+
+.player-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px; /* Aumenta este valor según sea necesario */
+}
+
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
