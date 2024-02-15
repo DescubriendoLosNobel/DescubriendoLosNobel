@@ -14,10 +14,14 @@ header {
   padding-bottom: 30px;
 }
 
+.header-top {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
 .logo-tics {
-  position: absolute;
-  top: 20px; 
-  right: 30px; 
   width: 200px; 
   height: auto;
 }
@@ -49,14 +53,17 @@ nav a {
 }
 
 @media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+  }
+
+  .logo-tics {
+    margin-bottom: 10px;
+  }
+
   nav li {
     display: block;
     margin: 10px;
-  }
-
-  nav ul {
-    text-align: center;
-    padding: 15px;
   }
 }
 
