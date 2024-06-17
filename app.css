@@ -73,3 +73,12 @@
             object-fit: cover; /* This will ensure the image covers the square area */
             margin-right: 20px; /* This adds some space between the image and the rest of the content in the div */
           }
+
+        .articulo {
+            background-color: white;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #ccc; /* Añade una línea que separa los artículos */
+        }
