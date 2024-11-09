@@ -45,12 +45,12 @@
          <p id = 'second-description'>Da click en cualquiera de las fotos para conocer más de los laureados del Nobel más recientes.</p>
       </section>
       <div class="grid">
-         <img src="Images/Paz24_1.jpg" alt="Nobel 1" onclick="showDescription('Nobel 1')">
-         <img src="Images/Economia24_1.jpg" alt="Nobel 2" onclick="showDescription('Nobel 2')">
-         <img src="Images/Literatura24_1.jpg" alt="Nobel 3" onclick="showDescription('Nobel 3')">
-         <img src="Images/Quimica24_1.jpg" alt="Nobel 4" onclick="showDescription('Nobel 4')">
-         <img src="Images/Medicina24_1.jpg" alt="Nobel 5" onclick="showDescription('Nobel 5')">
-         <img src="Images/Fisica24_1.jpg" alt="Nobel 6" onclick="showDescription('Nobel 6')">
+         <img src="Images/Paz24_2.jpg" alt="Nobel 1" onclick="showDescription('Nobel 1')">
+         <img src="Images/Economia24_2.jpg" alt="Nobel 2" onclick="showDescription('Nobel 2')">
+         <img src="Images/Literatura24_2.jpg" alt="Nobel 3" onclick="showDescription('Nobel 3')">
+         <img src="Images/Quimica24_2.jpg" alt="Nobel 4" onclick="showDescription('Nobel 4')">
+         <img src="Images/Medicina24_2.jpg" alt="Nobel 5" onclick="showDescription('Nobel 5')">
+         <img src="Images/Fisica24_2.jpg" alt="Nobel 6" onclick="showDescription('Nobel 6')">
       </div>
       <div class="description" id="descBox">
          <img id="descImage" src="Images/chemistry.jpeg" alt="Nobel Prize Winner" style="width: 40%; height: auto;">
@@ -66,32 +66,32 @@
          function showDescription(nobel) {
              const descriptions = {
          'Nobel 1': {
-         text: 'Narges Mohammadi fue galardonada con el Premio Nobel de la Paz por su incansable lucha contra la opresión de las mujeres y la promoción de los derechos humanos en Irán, a pesar de enfrentar arrestos, condenas y encarcelamiento prolongado. <br> <br>   Mohammadi, desde sus días como estudiante y luego como ingeniera y activista, ha sido una voz firme contra la pena de muerte y la violencia en las prisiones.  Desde su encierro, ha continuado liderando y apoyando las protestas, convirtiéndose en un símbolo de resistencia y esperanza. El reconocimiento del Comité Nobel no solo honra su valentía sino también la de miles que han luchado por la justicia y la igualdad en Irán.',
+         text: 'Nihon Hidankyo, una organización de supervivientes de las bombas atómicas de Hiroshima y Nagasaki, fue reconocida por su lucha para abolir las armas nucleares y su testimonio contra su uso.',
          imgUrl: 'Images/activist.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/peace/2023/summary'
          },
          'Nobel 2': {
-         text: 'La galardonada este año con el Premio de Ciencias Económicas, Claudia Goldin, ha presentado el primer estudio integral sobre los ingresos y la participación de la mujer en el mercado laboral a lo largo de los siglos. Su investigación revela las causas del cambio, así como las principales fuentes de la brecha de género que aún persiste.',
+         text: 'Daron Acemoglu, Simon Johnson y James Robinson fueron premiados por su investigación sobre cómo las instituciones influyen en la prosperidad de las sociedades, aportando una perspectiva fundamental en economía y ciencias sociales.',
          imgUrl: 'Images/economist.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/economic-sciences/2023/summary/'
          },
          'Nobel 3': {
-         text: 'El Premio Nobel de Literatura 2023 fue otorgado a Jon Fosse, un influente autor, traductor y dramaturgo noruego, conocido por su estilo minimalista e introspectivo. Nacido en 1959, Fosse ha escrito más de setenta obras, incluyendo novelas y obras de teatro, las cuales han sido traducidas a más de cincuenta idiomas. <br> <br> Destacado por continuar la tradición de Henrik Ibsen, es uno de los dramaturgos noruegos más representados a nivel mundial. Entre sus reconocimientos, ha sido nombrado Chevalier de la Ordre national du Mérite en Francia y recibió el Premio de Literatura del Consejo Nórdico en 2015.',
+         text: 'La escritora surcoreana Han Kang fue galardonada por su prosa poética que explora traumas históricos y la vulnerabilidad de la vida humana, destacando su estilo innovador y profundo.',
          imgUrl: 'Images/writer.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/literature/2023/summary'
          },
          'Nobel 4': {
-         text: 'El Premio Nobel de Química 2023 premia el descubrimiento y desarrollo de los puntos cuánticos, nanopartículas tan diminutas que su tamaño determina sus propiedades. Estos pequeñísimos componentes de la nanotecnología propagan ahora la luz de televisores y lámparas LED, y también pueden guiar a los cirujanos cuando extirpan tejido tumoral, entre otras muchas cosas.',
+         text: 'David Baker, Demis Hassabis y John Jumper recibieron el premio por sus investigaciones sobre proteínas. Baker fue reconocido por el diseño computacional de proteínas, mientras que Hassabis y Jumper destacaron en la predicción de estructuras proteicas mediante IA, un avance con amplias aplicaciones en biomedicina.',
          imgUrl: 'Images/chemists.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/chemistry/2023/summary'
          },
          'Nobel 5': {
-         text: 'Los descubrimientos de los dos galardonados del Nobel fueron fundamentales para desarrollar vacunas eficaces a base de ARNm contra el COVID-19 durante la pandemia que comenzó a principios de 2020. <br> Gracias a sus revolucionarios descubrimientos, que han modificado fundamentalmente nuestra comprensión de cómo interactúa el ARNm con nuestro sistema inmunitario, los galardonados contribuyeron al ritmo sin precedentes de desarrollo de vacunas durante una de las mayores amenazas para la salud humana de la era moderna.',
+         text: 'Victor Ambros y Gary Ruvkun fueron premiados por descubrir los microARN, pequeñas moléculas de ARN que regulan la expresión genética, esenciales para el desarrollo y funcionamiento de los organismos multicelulares.',
          imgUrl: 'Images/medics.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/medicine/2023/summary/'
          },
          'Nobel 6': {
-         text: 'Los tres galardonados con el Premio Nobel de Física 2023 han sido reconocidos por sus experimentos, que han proporcionado a la humanidad nuevas herramientas para explorar el mundo de los electrones en el interior de átomos y moléculas.'+ '<br> <br>' +'Pierre Agostini, Ferenc Krausz y Anne L\'Huillier han demostrado una forma de crear pulsos de luz extremadamente breves que pueden utilizarse para medir los procesos acelerados en los que los electrones se mueven o cambian de energía.',
+         text: 'John Hopfield y Geoffrey Hinton fueron premiados por sus contribuciones al aprendizaje automático y las redes neuronales artificiales, fundamentales en la evolución de la inteligencia artificial.',
          imgUrl: 'Images/physicists.jpeg',
          linkUrl: 'https://www.nobelprize.org/prizes/physics/2023/summary'
          }
